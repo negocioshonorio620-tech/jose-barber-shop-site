@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="Agende seu horário na José Barber Shop pelo WhatsApp. Confira os serviços e fale diretamente com a barbearia.">
+  <title>José Barber Shop | Seu estilo, no capricho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#11100f;--panel:#1b1917;--cream:#eee4d3;--muted:#b1a99e;--gold:#c59656;--line:rgba(238,228,211,.14);--green:#3b9b68}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{position:absolute;z-index:2;top:0;left:0;right:0;border-bottom:1px solid rgba(255,255,255,.15)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:Oswald,sans-serif;font-size:22px;letter-spacing:1px;text-transform:uppercase}.brand span{color:var(--gold)}.navlinks{display:flex;gap:30px;color:#eee4d3;font-size:14px}.navlinks a:hover{color:var(--gold)}.nav-cta,.button{border:0;background:var(--gold);color:#17120d;padding:13px 20px;font-weight:700;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;transition:.2s}.nav-cta:hover,.button:hover{background:#dfb47c;transform:translateY(-1px)}
+    .hero{min-height:690px;display:grid;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(13,12,11,.97) 0%,rgba(13,12,11,.89) 40%,rgba(13,12,11,.24) 100%),url('assets/jose-barber-shop.png') center 42%/cover}.hero:after{content:"";position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(transparent,var(--bg))}.hero-content{position:relative;z-index:1;padding:132px 0 110px;max-width:600px}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700}.hero h1{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;font-size:clamp(54px,8vw,94px);line-height:.98;letter-spacing:.5px;margin:18px 0}.hero h1 em{font-style:normal;color:var(--gold)}.hero p{color:#d1c9be;line-height:1.75;max-width:470px;margin:22px 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.button.outline{color:var(--cream);background:transparent;border:1px solid rgba(238,228,211,.4)}.button.outline:hover{border-color:var(--gold);color:var(--gold);transform:none}.micro{color:#a9a198;font-size:12px;margin-top:18px!important}.section{padding:88px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:34px}.section h2{font-family:Oswald,sans-serif;text-transform:uppercase;font-size:clamp(34px,5vw,54px);line-height:1.05;margin:10px 0}.section-head p{color:var(--muted);max-width:390px;line-height:1.7;margin:0 0 4px}.services{background:#171513}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{padding:28px;background:var(--panel);border:1px solid var(--line);min-height:190px;position:relative}.service .num{color:var(--gold);font:600 14px Oswald,sans-serif;letter-spacing:1px}.service h3{font:600 26px Oswald,sans-serif;text-transform:uppercase;margin:24px 0 8px}.service p{color:var(--muted);font-size:14px;line-height:1.6;margin:0}.service:after{content:"✦";position:absolute;right:24px;top:23px;color:var(--gold);font-size:15px}
+    .booking{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}.booking-copy p{color:var(--muted);line-height:1.8}.booking-note{padding:18px;border-left:2px solid var(--gold);background:rgba(197,150,86,.08);color:#cfc4b5;font-size:13px;line-height:1.65;margin-top:25px}.form{background:var(--panel);border:1px solid var(--line);padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:#c9beb0;letter-spacing:.6px}.field input,.field select{height:48px;width:100%;border:1px solid #403a34;background:#121110;color:var(--cream);padding:0 13px;border-radius:3px;outline:none}.field input:focus,.field select:focus{border-color:var(--gold)}.form .button{grid-column:1/-1;margin-top:4px;min-height:50px}.direct{margin-top:30px;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14px}.direct a{color:var(--cream);font-weight:700}.contact{background:#171513;padding:54px 0}.contact-row{display:flex;justify-content:space-between;align-items:center;gap:25px}.contact-row h2{font:600 32px Oswald,sans-serif;text-transform:uppercase;margin:0 0 7px}.contact-row p{color:var(--muted);margin:0}.footer{padding:22px 0;color:#817a72;font-size:12px;border-top:1px solid var(--line)}.footer-row{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:760px){.wrap{width:min(100% - 32px,560px)}.nav{height:68px}.navlinks{display:none}.nav-cta{font-size:12px;padding:11px 13px}.brand{font-size:19px}.hero{min-height:700px;background-position:58% center;background-image:linear-gradient(90deg,rgba(13,12,11,.95),rgba(13,12,11,.66)),url('assets/jose-barber-shop.png')}.hero-content{padding:130px 0 100px}.section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:12px}.service-grid{grid-template-columns:1fr}.service{min-height:160px}.service h3{margin-top:20px}.booking{grid-template-columns:1fr;gap:28px}.form{padding:20px;grid-template-columns:1fr}.field.full,.form .button{grid-column:auto}.contact-row{align-items:flex-start;flex-direction:column}.footer-row{flex-direction:column}.form{gap:15px}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap nav"><a class="brand" href="#inicio">José <span>Barber</span> Shop</a><nav class="navlinks"><a href="#servicos">Serviços</a><a href="#agendar">Agendar</a><a href="#contato">Contato</a></nav><a class="nav-cta" href="#agendar">Agendar horário <span>↗</span></a></div></header>
+  <main>
+    <section class="hero" id="inicio"><div class="wrap"><div class="hero-content"><div class="eyebrow">Barbearia • estilo e cuidado</div><h1>Seu estilo,<br><em>no capricho.</em></h1><p>Um bom corte muda o visual e a confiança. Escolha o serviço e peça seu horário direto pelo WhatsApp.</p><div class="hero-actions"><a class="button" href="#agendar">Agendar pelo WhatsApp <span>↗</span></a><a class="button outline" href="#servicos">Ver serviços</a></div><p class="micro">Atendimento mediante confirmação do horário pelo WhatsApp.</p></div></div></section>
+    <section class="section services" id="servicos"><div class="wrap"><div class="section-head"><div><div class="eyebrow">O que fazemos</div><h2>Serviços da casa</h2></div><p>Escolha o cuidado que combina com você. Consulte valores e disponibilidade pelo WhatsApp.</p></div><div class="service-grid"><article class="service"><span class="num">01 / CORTE</span><h3>Corte masculino</h3><p>Seu estilo de sempre ou uma mudança no visual, com acabamento caprichado.</p></article><article class="service"><span class="num">02 / BARBA</span><h3>Barba</h3><p>Alinhamento e cuidado para deixar a barba no formato que você gosta.</p></article><article class="service"><span class="num">03 / COMBO</span><h3>Corte + barba</h3><p>Um cuidado completo para renovar o visual de uma vez.</p></article></div></div></section>
+    <section class="section" id="agendar"><div class="wrap booking"><div class="booking-copy"><div class="eyebrow">Reserve seu momento</div><h2>Peça seu<br>horário.</h2><p>Preencha os dados e o WhatsApp abrirá com sua solicitação pronta para enviar. A barbearia confirma a disponibilidade por mensagem.</p><div class="booking-note">O envio do pedido não confirma a reserva automaticamente. Aguarde a resposta da José Barber Shop para confirmar seu horário.</div><div class="direct"><span>Prefere falar direto?</span><a href="https://wa.me/5561994498081" target="_blank" rel="noopener">Chamar no WhatsApp ↗</a></div></div>
+      <form class="form" id="bookingForm"><div class="field full"><label for="name">SEU NOME</label><input id="name" name="name" autocomplete="name" placeholder="Como podemos te chamar?" required></div><div class="field"><label for="service">SERVIÇO</label><select id="service" name="service" required><option value="" disabled selected>Escolha o serviço</option><option>Corte masculino</option><option>Barba</option><option>Corte + barba</option></select></div><div class="field"><label for="date">DATA DE PREFERÊNCIA</label><input id="date" name="date" type="date" required></div><div class="field"><label for="time">HORÁRIO DE PREFERÊNCIA</label><input id="time" name="time" type="time" required></div><div class="field"><label for="phone">SEU TELEFONE (OPCIONAL)</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(61) 9xxxx-xxxx"></div><button class="button" type="submit">Enviar pedido pelo WhatsApp <span>↗</span></button></form>
+    </div></section>
+    <section class="contact" id="contato"><div class="wrap contact-row"><div><h2>Vamos cuidar do visual?</h2><p>Fale com a José Barber Shop e consulte valores e horários disponíveis.</p></div><a class="button" href="https://wa.me/5561994498081" target="_blank" rel="noopener">WhatsApp: (61) 99449-8081 ↗</a></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-row"><span>© <span id="year"></span> José Barber Shop</span><span>Feito para você chegar no seu melhor.</span></div></footer>
+  <script>
+    const waNumber='5561994498081';
+    const dateField=document.getElementById('date');
+    const today=new Date();
+    const localDate=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+    dateField.min=localDate;
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('bookingForm').addEventListener('submit',function(event){
+      event.preventDefault();
+      const data=new FormData(this);
+      const date=new Date(`${data.get('date')}T12:00:00`).toLocaleDateString('pt-BR');
+      const message=[
+        'Olá, José Barber Shop! Quero pedir um horário:',
+        `Nome: ${data.get('name')}`,
+        `Serviço: ${data.get('service')}`,
+        `Data preferida: ${date}`,
+        `Horário preferido: ${data.get('time')}`,
+        data.get('phone')?`Meu telefone: ${data.get('phone')}`:null,
+        'Pode confirmar a disponibilidade, por favor?'
+      ].filter(Boolean).join('\n');
+      window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`,'_blank','noopener');
+    });
+  </script>
+</body>
+</html>
