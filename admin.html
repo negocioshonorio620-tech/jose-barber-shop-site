@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#11100f">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; base-uri 'none'; form-action 'self'; object-src 'none'">
+  <title>Gerenciar agenda | José Barber Shop</title>
+  <link rel="stylesheet" href="/admin.css"><script src="/admin.js" defer></script>
+</head>
+<body>
+<header><div class="wrap bar"><a href="/">José <span>Barber</span> Shop</a><a class="subtle" href="/">Ver site ↗</a></div></header>
+<main class="wrap">
+  <div class="heading"><p class="eyebrow">Área de gestão</p><h1>Sua agenda,<br>do seu jeito.</h1><p>Controle o atendimento e reserve espaço para seus compromissos.</p></div>
+  <p id="message" role="status" aria-live="polite"></p>
+  <section id="loginSection" class="card narrow"><h2>Entrar na agenda</h2><p>Use a senha de gestão compartilhada entre o responsável e quem cuida do site.</p><form id="loginForm"><label for="password">Senha de gestão</label><input id="password" type="password" autocomplete="current-password" required maxlength="128"><button type="submit">Entrar</button></form></section>
+  <div id="dashboard" hidden>
+    <div class="toolbar"><p>Horário de Brasília · intervalos de 30 minutos</p><div><button id="reload" class="secondary" type="button">Atualizar agenda</button><button id="logout" class="secondary" type="button">Sair</button></div></div>
+    <p id="initialPasswordNotice" class="notice" hidden>Você está usando a senha inicial. Troque a senha na seção “Senha de gestão” abaixo e compartilhe a nova somente com quem administra a agenda.</p>
+    <div class="grid">
+      <section class="card"><p class="eyebrow">Imprevistos e compromissos</p><h2>Bloquear atendimento</h2><p>Bloqueie uma data inteira ou apenas um período. A mudança vale para todos os visitantes do site.</p>
+        <form id="blockForm"><label for="blockDate">Data do bloqueio</label><input id="blockDate" type="date" required>
+          <label for="blockType">O que deseja bloquear?</label><select id="blockType"><option value="day">Dia inteiro</option><option value="range">Intervalo de horários</option></select>
+          <div id="rangeFields" class="pair" hidden><div><label for="blockStart">De</label><input id="blockStart" type="time" step="1800" value="08:00"></div><div><label for="blockEnd">Até</label><input id="blockEnd" type="time" step="1800" value="09:00"></div></div>
+          <label for="blockNote">Observação interna (opcional)</label><input id="blockNote" type="text" maxlength="160" placeholder="Ex.: compromisso pessoal"><small>Esta observação aparece somente nesta área de gestão.</small>
+          <button type="submit">Salvar bloqueio</button>
+        </form>
+      </section>
+      <section class="card"><p class="eyebrow">Datas e períodos</p><h2>Bloqueios da agenda</h2><p>Para voltar a atender em um período, remova o bloqueio correspondente.</p><div id="blocksList" class="blocks"></div></section>
+    </div>
+    <section class="card"><p class="eyebrow">Rotina da barbearia</p><h2>Horário semanal</h2><p>Marque os dias de atendimento e defina a abertura e o fechamento. O último atendimento começa 30 minutos antes do fechamento.</p><form id="weeklyForm"><div id="weeklyRows" class="weekly"></div><button type="submit">Salvar horário semanal</button></form></section>
+    <section class="card narrow"><h2>Senha de gestão</h2><p>Trocar a senha encerra o acesso nos outros aparelhos. Avise o outro responsável sobre a mudança.</p><form id="passwordForm"><label for="currentPassword">Senha atual</label><input id="currentPassword" type="password" autocomplete="current-password" required maxlength="128"><label for="newPassword">Nova senha (mínimo de 12 caracteres)</label><input id="newPassword" type="password" autocomplete="new-password" required minlength="12" maxlength="128"><label for="confirmPassword">Repita a nova senha</label><input id="confirmPassword" type="password" autocomplete="new-password" required minlength="12" maxlength="128"><button type="submit">Trocar senha</button></form></section>
+    <p class="footnote">O site envia solicitações pelo WhatsApp. Elas não ocupam horários automaticamente. Após confirmar um atendimento, você pode bloquear o período por aqui.</p>
+  </div>
+</main>
+</body>
+</html>

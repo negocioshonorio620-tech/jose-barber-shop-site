@@ -1,2 +1,10 @@
-wrangler.jsonc
-.assetsignore
+/worker.js
+/wrangler.jsonc
+/.assetsignore
+/tests
+/node_modules
+/.git
+/.dev.vars
+/package.json
+/package-lock.json
+/AGENTS.md

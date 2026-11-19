@@ -1,7 +1,32 @@
 {
   "name": "jose-barber-shop-site",
+  "main": "worker.js",
   "compatibility_date": "2026-11-18",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "AGENDA",
+        "class_name": "Agenda"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "agenda-v1",
+      "new_sqlite_classes": [
+        "Agenda"
+      ]
+    }
+  ],
+  "vars": {
+    "INITIAL_ADMIN_SALT": "aaa02feb992f2d70e55c82272acd6a2a656c941d91beaa0471392b02dc2c767a",
+    "INITIAL_ADMIN_HASH": "a71557df01a26d155dff9d97c70ceddddf8fcf8efc3db8c747a84ddfdc817ca6"
   }
 }
